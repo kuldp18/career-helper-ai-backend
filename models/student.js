@@ -25,6 +25,18 @@ const studentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    physics_marks: {
+      type: Number,
+    },
+    chemistry_marks: {
+      type: Number,
+    },
+    maths_marks: {
+      type: Number,
+    },
+    biology_marks: {
+      type: Number,
+    },
     salt: String,
     role: {
       type: Number,
