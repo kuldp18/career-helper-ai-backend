@@ -25,6 +25,10 @@ const studentSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    dob: {
+      type: String,
+      required: true,
+    },
     physics_marks: {
       type: Number,
     },
