@@ -2,14 +2,14 @@ const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
 
-const { signout, signup, signin, isSignedIn } = require('../controllers/auth');
+const { signout, signup, signin } = require('../controllers/auth');
 
 router.post(
   '/signup',
   [
     check('fullname')
       .isLength({ min: 5 })
-      .withMessage('Name must be atleast 5 characters.'),
+      .withMessage('Fullname must be atleast 5 characters.'),
 
     check('email').isEmail().withMessage('Valid email is required'),
 
