@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 6000;
 
 // my routes
 const authRoutes = require('./routes/auth');
+const studentRoutes = require('./routes/student');
 
 // connect to db
 
@@ -27,6 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // My routes
 app.use('/api', authRoutes);
+app.use('/api', studentRoutes);
 
 // starting a server
 app.listen(PORT, () => {
